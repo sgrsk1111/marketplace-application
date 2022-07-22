@@ -3,6 +3,9 @@ package com.zghurska;
 import java.util.List;
 import java.util.Scanner;
 
+import static com.zghurska.AddProducts.generateProducts;
+import static com.zghurska.AddUsers.generateUsers;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -19,18 +22,18 @@ public class Main {
 
         switch (inputNumber){
             case 1:
-                List<Users> users = AddUsers.generateUsers();
-                for (Users usersList : users){
+                List<Users> users = generateUsers();
+                for (Users usersList : users) {
                     System.out.println(usersList);
                 }
-                AddUsers.generateNewUsers();
+                AddUsers.generateUsers();
                 break;
             case 2:
-                List<Products> products = AddProducts.generateProducts();
+                List<Products> products = generateProducts();
                 for (Products productsList : products){
                     System.out.println(productsList);
                 }
-                AddProducts.generateNewProducts();
+                AddProducts.generateProducts();
                 break;
             case 3:
             case 4:

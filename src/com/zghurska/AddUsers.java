@@ -5,19 +5,13 @@ import java.util.List;
 
 public class AddUsers {
 
-public static List<Users> generateUsers(){
-   List<Users> result = new ArrayList<>();
-   for (int i = 0; i<10; i++){
-       Users users = generateNewUsers();
-       result.add(users);
-   }
-   return result;
-}
-public static Users generateNewUsers(){
-    int id = 0;
-    String firstName = "";
-    String lastName = "";
-    int countMoney = 0;
-    return new Users(id,firstName,lastName,countMoney);
-}
+    public static List<Users> generateUsers (){
+        List<Users> result = new ArrayList<>();
+        for(int i = 0; i < 1; i++) {
+            result.add(new Users(555,"Vasya","Pupkin",100));
+            result.add(new Users(666,"Sveta","Pupkina",90));
+            result.add(new Users(777,"Petya","Pupkin",70));
+        }
+        return result;
+    }
 }

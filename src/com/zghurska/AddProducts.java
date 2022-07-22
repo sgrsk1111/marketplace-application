@@ -4,18 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AddProducts {
-    public static List<Products> generateProducts(){
+    public static List<Products> generateProducts (){
         List<Products> result = new ArrayList<>();
-         for (int i = 0; i<10;i++){
-            Products products = generateNewProducts();
-            result.add(products);
+        for(int i = 0; i < 1; i++) {
+            result.add(new Products(222,"Banana",25));
+            result.add(new Products(333,"Apple",15));
+            result.add(new Products(111,"Orange",35));
         }
-         return result;
-    }
-    public static Products generateNewProducts(){
-        int id = 0;
-        String nameProducts = "";
-        int price = 0;
-        return new Products(id, nameProducts,price);
+        return result;
     }
 }
