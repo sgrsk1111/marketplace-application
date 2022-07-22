@@ -2,9 +2,9 @@ package com.zghurska;
 
 public class Users {
 
-    private int ID;
-    private String FIRST_NAME;
-    private String LAST_NAME;
+    private final int ID;
+    private final String FIRST_NAME;
+    private final String LAST_NAME;
     private int AMOUNT_MONEY;
 
     public Users(int ID, String FIRST_NAME, String LAST_NAME, int AMOUNT_MONEY) {
@@ -18,33 +18,18 @@ public class Users {
         return ID;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
-    }
-
     public String getFIRST_NAME() {
         return FIRST_NAME;
-    }
-
-    public void setFIRST_NAME(String FIRST_NAME) {
-        this.FIRST_NAME = FIRST_NAME;
     }
 
     public String getLAST_NAME() {
         return LAST_NAME;
     }
 
-    public void setLAST_NAME(String LAST_NAME) {
-        this.LAST_NAME = LAST_NAME;
-    }
-
     public int getAMOUNT_MONEY() {
         return AMOUNT_MONEY;
     }
 
-    public void setAMOUNT_MONEY(int AMOUNT_MONEY) {
-        this.AMOUNT_MONEY = AMOUNT_MONEY;
-    }
 
     @Override
     public String toString() {
