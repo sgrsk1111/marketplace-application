@@ -2,13 +2,12 @@ package com.zghurska;
 
 public class Main {
     public static void main(String[] args) {
+    Products apple = new Products(2352,"Apple",50);
+    Products orange = new Products(4444,"Orange",42);
+    Products banana = new Products(7585,"Banana",35);
 
-        Users a = new Users(1,"j","h",10);
-        Users b = new Users(1,"j","h",10);
-        Users c = new Users(1,"j","h",10);
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
+
+
 
     }
 }
