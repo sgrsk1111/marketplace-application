@@ -7,12 +7,13 @@ public class AddUsers {
 
 public static List<Users> generateUsers(){
    List<Users> result = new ArrayList<>();
-   while (true){
+   for (int i = 0; i<10; i++){
        Users users = generateNewUsers();
        result.add(users);
    }
+   return result;
 }
-private static Users generateNewUsers(){
+public static Users generateNewUsers(){
     int id = 0;
     String firstName = "";
     String lastName = "";
