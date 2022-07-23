@@ -37,16 +37,14 @@ public class Main {
                 break;
             case 3:
                 System.out.println("Please, input your ID and than ID products, which you want to buy");
-                Purchase.getPurchase();//возможность покупки товара
+                Purchase.getPurchase();
+                Purchase.getInfoAboutMoney();
+
+                //возможность покупки товара
                 /*
                 для покупки товара необходимо ввести ИД покупателя,
                 а также ввести ИД товара, который будет куплен
                  */
-                try{
-                 Users.setAMOUNT_MONEY(0);
-                } catch (ArithmeticException e){
-                    System.out.println("Error: " + e.getMessage());
-                }
                  // 1!! если у юзера нехватает денег на покупку выдать ексепшн
                 // если покупка была успешной то выдать об этом сообщение
                 //обязательно нужно списать деньги за купленный товар с кошелька
