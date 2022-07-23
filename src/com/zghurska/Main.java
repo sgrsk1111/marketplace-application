@@ -38,6 +38,7 @@ public class Main {
             case 3:
                 System.out.println("Please, input your ID and than ID products, which you want to buy");
                 Purchase.getPurchase();
+                Purchase.getProducts();
                 Purchase.getInfoAboutMoney();
 
                 //возможность покупки товара
@@ -55,14 +56,5 @@ public class Main {
             default:
                 System.out.println("Ops, something wrong!");
         }
-
-
-
-         //добавить отдельный класс (каса) который будет сохранять купленные продукты
-        //проверка на достаточное количество денег спец-класс или же отдельный метод в классе под касу?
-        //вывод инфы по покупателям с помощью айди
-        //вывод инфы продуктов с помощью айди
-
-
     }
 }
