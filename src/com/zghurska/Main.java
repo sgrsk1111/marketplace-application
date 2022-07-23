@@ -35,12 +35,19 @@ public class Main {
                 }
                 AddProducts.generateProducts();
                 break;
-            case 3: //возможность покупки товара
+            case 3:
+                System.out.println("Please, input your ID and than ID products, which you want to buy");
+                Purchase.getPurchase();//возможность покупки товара
                 /*
                 для покупки товара необходимо ввести ИД покупателя,
                 а также ввести ИД товара, который будет куплен
                  */
-                 //если у юзера нехватает денег на покупку выдать ексепшн
+                try{
+                 Users.setAMOUNT_MONEY(0);
+                } catch (ArithmeticException e){
+                    System.out.println("Error: " + e.getMessage());
+                }
+                 // 1!! если у юзера нехватает денег на покупку выдать ексепшн
                 // если покупка была успешной то выдать об этом сообщение
                 //обязательно нужно списать деньги за купленный товар с кошелька
                 //после покупки, вся инфа о юзере и его покупках должна где то хранится (колекции)

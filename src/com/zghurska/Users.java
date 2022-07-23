@@ -1,5 +1,7 @@
 package com.zghurska;
 
+import java.util.List;
+
 public class Users {
 
     private final int ID;
@@ -30,6 +32,9 @@ public class Users {
         return AMOUNT_MONEY;
     }
 
+    public static void setAMOUNT_MONEY(int AMOUNT_MONEY) {
+        AMOUNT_MONEY = AMOUNT_MONEY;
+    }
 
     @Override
     public String toString() {
