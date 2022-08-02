@@ -18,7 +18,7 @@ public class Main {
         System.out.println("4 - Display list of user products by user ID");
         System.out.println("5 - Display list of users that buy bought products by product ID");
 
-        int inputNumber = scanner.nextInt();
+       int inputNumber = scanner.nextInt();
 
         switch (inputNumber){
             case 1:
@@ -37,9 +37,8 @@ public class Main {
                 break;
             case 3:
                 System.out.println("Please, input your ID and than ID products, which you want to buy");
-                Purchase.getPurchase();
-                Purchase.getProducts();
-                Purchase.getInfoAboutMoney();
+              //  Purchase.getPurchase();
+                AddProducts.getProducts();
 
                 //возможность покупки товара
                 /*

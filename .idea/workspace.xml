@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="747e4f5a-4843-474f-a72f-bd4e674a2ef9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zghurska/AddProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zghurska/AddProducts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zghurska/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zghurska/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zghurska/Purchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zghurska/Purchase.java" afterDir="false" />
     </list>
@@ -84,5 +85,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/marketplace_application$Main.ic" NAME="Main Coverage Results" MODIFIED="1658642194927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.zghurska.*</FILTER>
+    </SUITE>
   </component>
 </project>

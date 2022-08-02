@@ -8,16 +8,14 @@ public class Purchase {
 
     static void getInfoAboutMoney(){
 
-        Products checkProducts = (Products) AddProducts.generateProducts()
-                .stream()
-                .filter(products -> products.getID() == getProducts())
-                .collect(Collectors.toList());
-
+        /*
         Users checkUsers = (Users) AddUsers.generateUsers()
                 .stream()
-                .filter(users -> (users.getID() == getPurchase()) && (users.getAMOUNT_MONEY()) > checkProducts.getPRICE())
+                .filter(users -> users.getID() == getPurchase())
                 .collect(Collectors.toList());
 
+        System.out.println(checkUsers);*/
+/*
         if( checkProducts.getPRICE() > checkUsers.getAMOUNT_MONEY()){
             try{
                int result = checkProducts.getPRICE() - checkUsers.getAMOUNT_MONEY();
@@ -27,7 +25,7 @@ public class Purchase {
             }
         } else {
             System.out.println(checkUsers);
-        }
+        }*/
     }
 
     static int getPurchase (){
@@ -35,9 +33,6 @@ public class Purchase {
         return scanner.nextInt();
     }
 
-    static int getProducts (){
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextInt();
-    }
+
 
 }
