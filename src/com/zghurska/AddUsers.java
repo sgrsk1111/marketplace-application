@@ -2,6 +2,7 @@ package com.zghurska;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class AddUsers {
 
@@ -13,5 +14,19 @@ public class AddUsers {
             result.add(new Users(777,"Petya","Pupkin",70));
         }
         return result;
+    }
+
+    static Users getUsers() {
+        Scanner scanner = new Scanner(System.in);
+        int idUsers = scanner.nextInt();
+        Users finded = null;
+        for (Users test : generateUsers()) {
+            if (test.getID() == idUsers) {
+                finded = test;
+                break;
+            }
+        }
+
+        return finded;
     }
 }
