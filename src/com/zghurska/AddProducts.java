@@ -22,14 +22,11 @@ public class AddProducts {
         Products finded = null;
         for (Products test : generateProducts()) {
             if (test.getID() == idProducts) {
-                System.out.println("Okay, we found this products");
                 finded = test;
                 break;
-            } else {
-                System.out.println("Please, re-enter the product ID");
-                getProducts();
             }
         }
+
         return finded;
     }
 }
