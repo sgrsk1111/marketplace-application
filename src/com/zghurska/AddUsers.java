@@ -27,27 +27,19 @@ public class AddUsers {
             }
         }
 
+         try {
+             if (finded.getAMOUNT_MONEY() < AddProducts.getProducts().getPRICE()) {
+                 throw new NullPointerException("Exception: The Users does not have enough money");
+             } else
+                 System.out.println("Yours money: " + finded.getAMOUNT_MONEY());
+         } catch (NullPointerException e){
+             System.out.println(e.getMessage());
+         }
+
         return finded;
     }
 
     static Users getPurchase(){
-
-
-
-
-
-
-
-                try {
-                    if (getUsers().getAMOUNT_MONEY() < AddProducts.getProducts().getPRICE())
-                        System.out.println("Your not enough money to buy");
-                } catch (ArithmeticException e) {
-                    System.out.println("Error: " + e.getMessage());
-                }
-
-
-
-
         return getUsers();
     }
 }

@@ -31,7 +31,7 @@ public class AddProducts {
                     throw new NullPointerException("Exception: The Product not found");
                 } else
                     System.out.println("The Product cost: " + finded.getPRICE());
-            }catch (NullPointerException e){
+            } catch (NullPointerException e){
                 System.out.println(e.getMessage());
             }
         }
