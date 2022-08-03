@@ -37,8 +37,9 @@ public class Main {
                 break;
             case 3:
                 System.out.println("Please, input your ID and than ID products, which you want to buy");
-              //  Purchase.getPurchase();
+                AddUsers.getUsers();
                 AddProducts.getProducts();
+                AddUsers.getPurchase();
 
                 //возможность покупки товара
                 /*

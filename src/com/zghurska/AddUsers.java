@@ -16,7 +16,7 @@ public class AddUsers {
         return result;
     }
 
-    static Users getUsers() {
+     static Users getUsers() {
         Scanner scanner = new Scanner(System.in);
         int idUsers = scanner.nextInt();
         Users finded = null;
@@ -28,5 +28,26 @@ public class AddUsers {
         }
 
         return finded;
+    }
+
+    static Users getPurchase(){
+
+
+
+
+
+
+
+                try {
+                    if (getUsers().getAMOUNT_MONEY() < AddProducts.getProducts().getPRICE())
+                        System.out.println("Your not enough money to buy");
+                } catch (ArithmeticException e) {
+                    System.out.println("Error: " + e.getMessage());
+                }
+
+
+
+
+        return getUsers();
     }
 }
