@@ -3,8 +3,8 @@ package com.zghurska;
 import java.util.List;
 import java.util.Scanner;
 
-import static com.zghurska.AddProducts.generateProducts;
-import static com.zghurska.AddUsers.generateUsers;
+import static com.zghurska.Resources.generateProducts;
+import static com.zghurska.Resources.generateUsers;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,20 +26,20 @@ public class Main {
                 for (Users usersList : users) {
                     System.out.println(usersList);
                 }
-                AddUsers.generateUsers();
+                Resources.generateUsers();
                 break;
             case 2:
                 List<Products> products = generateProducts();
                 for (Products productsList : products){
                     System.out.println(productsList);
                 }
-                AddProducts.generateProducts();
+                Resources.generateProducts();
                 break;
             case 3:
                 System.out.println("Please, input your ID and than ID products, which you want to buy");
-                AddUsers.getUsers();
-                AddProducts.getProducts();
-                AddUsers.getPurchase();
+                Resources.getUsers();
+                Resources.getProducts();
+                Resources.getPurchase();
 
                 //возможность покупки товара
                 /*
