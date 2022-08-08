@@ -30,9 +30,8 @@ public class Users {
         return AMOUNT_MONEY;
     }
 
-    public int setAMOUNT_MONEY() {
+    public void setAMOUNT_MONEY(int amount) {
         this.AMOUNT_MONEY = AMOUNT_MONEY;
-        return AMOUNT_MONEY;
     }
 
     @Override

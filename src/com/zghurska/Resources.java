@@ -2,6 +2,8 @@ package com.zghurska;
 
 import java.util.*;
 
+import static java.lang.Math.subtractExact;
+
 public class Resources {
 
    static Map<Integer, List<String>> usersPurchases = new HashMap<Integer, List<String>>();
@@ -76,7 +78,7 @@ public class Resources {
         System.out.println("STORE PURCHASE");
         int keyUser = 0;
         for(Map.Entry<Integer, List<String>> store : usersPurchases.entrySet()){
-            if (store.getKey()== getUsers().getID()){
+            if (store.getKey() == getUsers().getID()){
                 keyUser= getUsers().getID();
                 System.out.println(keyUser);
                 List<String> myPurchase = new ArrayList<String>();
@@ -114,12 +116,12 @@ public class Resources {
 
             System.out.println(usersPurchases);
         }
+    }
 
-
-
-
-
-
-
+     static void updateWalletUsers (){
+        System.out.println("Yours balance update");
+         Users finded = getUsers();
+         Products findedProduct = getProducts();
+         finded.setAMOUNT_MONEY(subtractExact(finded.getAMOUNT_MONEY(),findedProduct.getPRICE()));
     }
 }
