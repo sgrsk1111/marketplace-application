@@ -95,13 +95,31 @@ public class Resources {
             System.out.println(usersPurchases);
         }
 
+        int keyProduct = 0;
+        for(Map.Entry<Integer, List<String>> store : productsToUsers.entrySet()){
+            if (store.getKey()== getProducts().getID()){
+                keyProduct= getProducts().getID();
+                System.out.println(keyProduct);
+                List<String> myPurchaseProduct = new ArrayList<String>();
+                myPurchaseProduct = store.getValue();
+                System.out.println(myPurchaseProduct);
+                myPurchaseProduct.add(String.valueOf(getUsers().getID()));
+                System.out.println(myPurchaseProduct);
+                usersPurchases.put(keyProduct,myPurchaseProduct);
+            }
+
+            if (keyProduct == 0){
+                usersPurchases.put(getProducts().getID(), new ArrayList<String>(Integer.parseInt(String.valueOf(getUsers().getID()))));
+            }
+
+            System.out.println(usersPurchases);
+        }
 
 
 
 
 
 
-        //  int countMoney = getUsers().getAMOUNT_MONEY() - getProducts().getPRICE();
-      //  System.out.println("Count money" + countMoney);
+
     }
 }
