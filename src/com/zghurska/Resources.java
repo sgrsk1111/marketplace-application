@@ -1,10 +1,11 @@
 package com.zghurska;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Resources {
+
+   static Map<Integer, List<String>> usersPurchases = new HashMap<Integer, List<String>>();
+   static Map<Integer, List<String>> productsToUsers = new HashMap<Integer, List<String>>();
 
     public static List<Users> generateUsers (){
         List<Users> result = new ArrayList<>();
@@ -25,6 +26,7 @@ public class Resources {
         }
         return result;
     }
+
     static Products getProducts() {
         Scanner scanner = new Scanner(System.in);
         int idProducts = scanner.nextInt();
@@ -32,18 +34,17 @@ public class Resources {
         for (Products test : generateProducts()) {
             if (test.getID() == idProducts) {
                 finded = test;
-                break;
-            }
-
-            try {
-                if (finded == null) {
-                    throw new NullPointerException("Exception: The Product not found");
-                } else
-                    System.out.println("The Product cost: " + finded.getPRICE());
-            } catch (NullPointerException e){
-                System.out.println(e.getMessage());
             }
         }
+                try {
+                    if (finded.getID() != idProducts) {
+                        throw new NullPointerException("Exception: The Product not found");
+                    } else{
+                        System.out.println("Item found, price: " + finded.getPRICE());
+                    }
+                } catch (NullPointerException e){
+                    System.out.println(e.getMessage());
+                }
 
         return finded;
     }
@@ -55,15 +56,15 @@ public class Resources {
         for (Users test : generateUsers()) {
             if (test.getID() == idUsers) {
                 finded = test;
-                break;
             }
         }
 
          try {
-             if (finded.getAMOUNT_MONEY() < AddProducts.getProducts().getPRICE()) {
+             if (finded.getAMOUNT_MONEY() < getProducts().getPRICE()) {
                  throw new NullPointerException("Exception: The Users does not have enough money");
-             } else
-                 System.out.println("Yours money: " + finded.getAMOUNT_MONEY());
+             } else{
+                 System.out.println("Users found. Yours money before purchase: " + finded.getAMOUNT_MONEY());
+             }
          } catch (NullPointerException e){
              System.out.println(e.getMessage());
          }
@@ -71,11 +72,36 @@ public class Resources {
         return finded;
     }
 
-    static Users getPurchase(){
-        Users finded = getUsers();
-       // if(finded.getID()== getUsers().getID()) finded.getAMOUNT_MONEY() = finded.getAMOUNT_MONEY()
+    static void getPurchase(){
+        System.out.println("STORE PURCHASE");
+        int keyUser = 0;
+        for(Map.Entry<Integer, List<String>> store : usersPurchases.entrySet()){
+            if (store.getKey()== getUsers().getID()){
+                keyUser= getUsers().getID();
+                System.out.println(keyUser);
+                List<String> myPurchase = new ArrayList<String>();
+                myPurchase = store.getValue();
+                System.out.println(myPurchase);
+                myPurchase.add(String.valueOf(getProducts().getID()));
+                System.out.println(myPurchase);
+                usersPurchases.put(keyUser,myPurchase);
+            }
+
+            if (keyUser == 0){
+                System.out.println("I will create new purchases list " + getUsers().getID());
+                usersPurchases.put(getUsers().getID(), new ArrayList<String>(Integer.parseInt(String.valueOf(getProducts().getID()))));
+            }
+
+            System.out.println(usersPurchases);
+        }
 
 
-        return getUsers();
+
+
+
+
+
+        //  int countMoney = getUsers().getAMOUNT_MONEY() - getProducts().getPRICE();
+      //  System.out.println("Count money" + countMoney);
     }
 }

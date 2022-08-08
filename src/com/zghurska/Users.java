@@ -30,6 +30,11 @@ public class Users {
         return AMOUNT_MONEY;
     }
 
+    public int setAMOUNT_MONEY() {
+        this.AMOUNT_MONEY = AMOUNT_MONEY;
+        return AMOUNT_MONEY;
+    }
+
     @Override
     public String toString() {
         return "Users{" +

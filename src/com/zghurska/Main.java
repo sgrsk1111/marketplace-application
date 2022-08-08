@@ -3,8 +3,7 @@ package com.zghurska;
 import java.util.List;
 import java.util.Scanner;
 
-import static com.zghurska.Resources.generateProducts;
-import static com.zghurska.Resources.generateUsers;
+import static com.zghurska.Resources.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -37,9 +36,9 @@ public class Main {
                 break;
             case 3:
                 System.out.println("Please, input your ID and than ID products, which you want to buy");
-                Resources.getUsers();
-                Resources.getProducts();
-                Resources.getPurchase();
+                getUsers();
+                getProducts();
+                getPurchase();
 
                 //возможность покупки товара
                 /*
