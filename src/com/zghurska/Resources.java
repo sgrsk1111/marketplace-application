@@ -124,4 +124,22 @@ public class Resources {
          Products findedProduct = getProducts();
          finded.setAMOUNT_MONEY(subtractExact(finded.getAMOUNT_MONEY(),findedProduct.getPRICE()));
     }
-}
+
+    static void buyProduct(){
+        Users user = getUsers();
+        Products product = getProducts();
+
+            if (user.getAMOUNT_MONEY() < product.getPRICE()) {
+                throw new IllegalArgumentException("Exception: The Users does not have enough money");
+            }
+
+            if(usersPurchases.containsKey(user.getID())){
+                usersPurchases.get(user.getID()).add(String.valueOf(product));
+                updateWalletUsers();
+                getPurchase();
+            }
+
+        System.out.println("Удачаная покупка");
+    }
+ }
+
